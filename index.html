@@ -223,7 +223,7 @@
         
         .bio-card p { margin-bottom: 1rem; }
 
-        .metrics-card {
+.metrics-card {
             background: #ffffff;
             color: var(--text-main);
             border-radius: var(--radius);
@@ -232,20 +232,31 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border: 1px solid rgba(0,0,0,0.05);
         }
+
+        .metrics-card h3 { color: var(--primary) !important; }
 
         .metric-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid #e2e8f0; /* Fixed border color */
         }
         .metric-row:last-child { border-bottom: none; }
         .metric-val { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
 
         .skill-tags { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .skill { background: rgba(255,255,255,0.1); padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.8rem; color: #fff; }
+        
+        .skill { 
+            background: #f1f5f9; /* Light gray background */
+            padding: 0.3rem 0.7rem; 
+            border-radius: 6px; 
+            font-size: 0.8rem; 
+            color: var(--text-main); /* Dark text */
+            border: 1px solid #e2e8f0;
+        }
 
         /* --- Research Cards --- */
         .research-grid {
@@ -413,13 +424,19 @@
         .journal-tag i { color: var(--highlight); }
 
         /* --- Contact --- */
+/* --- Contact --- */
         .contact-section {
             background: #ffffff;
             color: var(--text-main);
             border-radius: var(--radius) var(--radius) 0 0;
             padding: 4rem 2rem;
             margin-top: 4rem;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.03);
+            border-top: 1px solid rgba(0,0,0,0.05);
         }
+        
+        .contact-section h2 { color: var(--primary) !important; }
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -428,15 +445,16 @@
             margin: 3rem auto 0;
         }
         .contact-item {
-            background: rgba(255,255,255,0.05);
+            background: #f8fafc; /* Light gray card */
             padding: 2rem;
             border-radius: 12px;
             text-align: center;
-            backdrop-filter: blur(5px);
+            border: 1px solid #e2e8f0;
         }
         .contact-item i { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; }
-        .contact-item a { color: #fff; opacity: 0.8; }
+        .contact-item a { color: var(--text-main); opacity: 0.9; } /* Dark text */
         .contact-item a:hover { opacity: 1; color: var(--accent); }
+        .contact-item p { color: var(--text-muted); }
 
         /* --- Footer --- */
         footer { background: #ffffff; color: #f0f4f8; text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
